@@ -44,6 +44,8 @@ namespace FirstMVCProject.Controllers
             };
             //ViewBag.blog = blog;
             return View(blog);
+
+            // Yazar : ID,AdSoyad,Biyografi,DogumTarihi
         }
     }
 }

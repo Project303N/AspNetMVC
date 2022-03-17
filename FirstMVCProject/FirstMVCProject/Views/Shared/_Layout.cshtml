@@ -9,6 +9,9 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+
+    @RenderSection("slider",false)
+
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -32,12 +35,11 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-
         <footer>
             <p>&copy; @DateTime.Now.Year - İlk ASP.NET Uygulamam</p>
         </footer>
 
-        @RenderSection("afterfooter", false);
+        @RenderSection("afterfooter",false);
 
     </div>
 
