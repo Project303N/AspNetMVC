@@ -1,4 +1,5 @@
-﻿
+﻿@using FirstMVCProject.Models
+@model Blog
 @{
     ViewBag.Title = "Burası Test Sayfası";
     // Layout = "~/Views/Shared/_Layout.cshtml";
@@ -11,10 +12,20 @@
             Merhaba
         </p>
     </div>
-    <div class="col-lg-10 p-3 bg-primary" style="height:600px;">
-        <p>
-            Merhaba
-        </p>
+    <div class="col-lg-10 p-5 bg-primary" style="height:600px;">
+        <div class="row p-5 bg-light">
+            <h3>@ViewBag.baslik</h3>
+            <hr />
+            <p>@ViewBag.detay</p>
+            <p style="font-size:1.1rem;">@ViewData["tarih"]</p>
+        </div>
+        <div class="row p-5 bg-secondary">
+            <h3>@Model.Baslik</h3>
+            <hr />
+            <p>@Model.Detay</p>
+            <p style="font-size:1.1rem;">@Model.Tarih</p>
+        </div>
+
     </div>
 </div>
 
